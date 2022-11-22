@@ -13,13 +13,21 @@ class Solution(object):
             
             ## add the first element in temp
             if not temp and not output:
+                print(output)
                 print("hi")
                 temp.append(intervals[i][0])
-            elif not temp:
+            elif not temp and output != []:
+                print(output)
+                print(output[-1][1])
+                print(intervals[i][0])
                 print("hiww")
                 if output[-1][1] < intervals[i][0]:
+                    
                     print("hidfdww")
-                    temp.append (intervals[i][0])
+                    print(output)
+                    print(output[-1])
+                    temp.append(intervals[i][0])
+                    print(temp)
 
             ## add the second element in temp
             
@@ -35,7 +43,6 @@ class Solution(object):
             if len(temp)==2:
                 output.append(temp)
                 temp = []
-            
             i+=1
         
         return output
